@@ -1,0 +1,34 @@
+<div class='grid grid-cols-2 mt-6'>
+  <ul class='flex flex-row gap-8'>
+    <li class='flex justify-center items-center'><a class='text-slate-900 border-b border-b-slate-900'>All Products</a></li>
+    <li class='flex justify-center items-center'><a class='text-slate-500 hover:text-slate-900 border-b-0 hover:border-b cursor-pointer hover:border-b-slate-900 duration-300'>Women</a></li>
+    <li class='flex justify-center items-center'><a class='text-slate-500 hover:text-slate-900 border-b-0 hover:border-b cursor-pointer hover:border-b-slate-900 duration-300'>Men</a></li>
+    <li class='flex justify-center items-center'><a class='text-slate-500 hover:text-slate-900 border-b-0 hover:border-b cursor-pointer hover:border-b-slate-900 duration-300'>Bag</a></li>
+    <li class='flex justify-center items-center'><a class='text-slate-500 hover:text-slate-900 border-b-0 hover:border-b cursor-pointer hover:border-b-slate-900 duration-300'>Shoes</a></li>
+    <li class='flex justify-center items-center'><a class='text-slate-500 hover:text-slate-900 border-b-0 hover:border-b cursor-pointer hover:border-b-slate-900 duration-300'>Watches</a></li>
+  </ul>
+  <ul class='flex flex-row gap-4 justify-end'>
+    <li class='border border-slate-400 px-4 py-2 hover:text-white hover:bg-indigo-400 duration-300 ease-in-out rounded-sm cursor-pointer '><i class="fa-solid fa-arrow-down-wide-short mr-2"></i>Filter</li>
+    <li class='border border-slate-400 px-4 py-2 hover:text-white hover:bg-indigo-400 duration-300 ease-in-out rounded-sm cursor-pointer '><i class="fa-solid fa-magnifying-glass mr-2"></i>Search</li>
+  </ul>
+</div>
+
+
+<div class='grid grid-cols-4 gap-8 mt-12'>
+  <% 8.times do |i| %>
+  <div>
+    <div class='overflow-hidden relative flex justify-center group'>
+      <%= image_tag "product-0#{i+1}.jpg.webp", class: 'group-hover:scale-110 duration-500 ease-in-out cursor-pointer'%>
+      <div class='absolute -bottom-10 group-hover:bottom-8 duration-300 ease-in-out'>
+        <p class='bg-white text-slate-700 hover:bg-slate-700 hover:text-white rounded-full px-6 py-2 cursor-pointer'>Quick View</p>
+      </div>
+    </div>
+    <div class='flex justify-between items-center mt-2'>
+      <p class='text-slate-400 hover:text-indigo-400 cursor-pointer'>Esprit Ruffle Shirt</p>
+      <i class="fa-regular fa-heart text-slate-400 hover:text-indigo-400 cursor-pointer"></i>
+    </div>
+    <p class='text-slate-600 mt-2'>$16.64</p>
+  </div>
+  <% end %>
+
+</div>
