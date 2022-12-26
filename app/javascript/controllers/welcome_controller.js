@@ -12,18 +12,18 @@ export default class extends Controller {
 
   static values = { index: Number };
 
-  handleScroll(_event) {
-    const clientHeight = this.navigationBarTarget.getBoundingClientRect().top;
-    if (-100 > clientHeight) {
-      document.getElementById('navigationBar').classList.remove('bg-white');
-    } else {
-      document.getElementById('navigationBar').classList.add('bg-transparent');
-    }
-  }
+  // handleScroll(_event) {
+  //   const clientHeight = this.navigationBarTarget.getBoundingClientRect().top;
+  //   if (-100 > clientHeight) {
+  //     document.getElementById('navigationBar').classList.remove('bg-white');
+  //   } else {
+  //     document.getElementById('navigationBar').classList.add('bg-transparent');
+  //   }
+  // }
 
-  connect() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
+  // connect() {
+  //   window.addEventListener('scroll', this.handleScroll);
+  // }
 
   showNavigation() {
     this.mobileNavigationTarget.classList.add('h-96');
