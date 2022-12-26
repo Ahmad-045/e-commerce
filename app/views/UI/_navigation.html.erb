@@ -1,10 +1,10 @@
-<div class='px-20 py-6'>
-  <div class='grid grid-cols-2'>
-    <div class='flex gap-16 items-center'>
-      <div>
+<div class='px-2 xl:px-20 py-6'>
+  <div class='grid grid-cols-3'>
+    <div class='flex gap-4 xl:gap-10 items-center col-span-2'>
+      <div class='mr-4'>
         <%= image_tag "Logo.webp"  %>
       </div>
-      <ul class='flex justify-between items-center gap-10'>
+      <ul class='hidden lg:flex justify-between items-center gap-4 xl:gap-10'>
         <li class='cursor-pointer text-indigo-400 font-medium text-md'>Home</li>
         <li class='cursor-pointer text-gray-600 hover:text-indigo-400 font-medium ease-in-out duration-300 text-md'>Shop</li>
         <li class='cursor-pointer text-gray-600 hover:text-indigo-400 font-medium ease-in-out duration-300 text-md relative'>
@@ -17,11 +17,43 @@
       </ul>
     </div>
     <div>
-      <ul class='flex gap-10 justify-end'>
+      <ul class='flex gap-4 lg:gap-10 justify-end'>
         <li class='cursor-pointer text-gray-600 hover:text-indigo-400 font-medium ease-in-out duration-300 text-md'><i class="fa-solid fa-magnifying-glass"></i></li>
         <li class='cursor-pointer text-gray-600 hover:text-indigo-400 font-medium ease-in-out duration-300 text-md'><i class="fa-solid fa-cart-shopping"></i></li>
         <li class='cursor-pointer text-gray-600 hover:text-indigo-400 font-medium ease-in-out duration-300 text-md'><i class="fa-regular fa-heart"></i></li>
+        <button data-action='welcome#showNavigation' data-welcome-target='openNavIcon' class='lg:hidden cursor-pointer text-gray-600 hover:text-indigo-400 font-medium ease-in-out duration-300 text-md'><i class="fa-solid fa-bars"></i></button>
+        <button data-action='welcome#closeNavigation' data-welcome-target="closeNavIcon" class='hidden cursor-pointer text-gray-600 hover:text-indigo-400 font-medium ease-in-out duration-300 text-md'><i class="fa-solid fa-xmark"></i></button>
       </ul>
     </div>
   </div>
 </div>
+
+<%# Mobile Navigation %>
+
+
+<div data-welcome-target='mobileNavigation' class='block lg:hidden h-0 overflow-hidden transition-all ease-in-out duration-500'>
+  <div class='bg-slate-900 text-gray-400'>
+    <p class='py-2 px-4'>Free shipping for standard order over $100</p>
+    <hr />
+    <div class='flex flex-row gap-2 py-2 px-4'>
+      <p class='border-l border-r border-slate-400 px-2 hover:text-indigo-400'>Help & FAQs</p>
+      <p class='border-r border-slate-400 px-2 hover:text-indigo-400'>My Account</p>
+      <p class='border-r border-slate-400 px-2 hover:text-indigo-400'>EN</p>
+      <p class='border-r border-slate-400 px-2 hover:text-indigo-400'>USD</p>
+    </div>
+  </div>
+  <div class='bg-indigo-400'>
+    <ul class='flex flex-col gap-4 xl:gap-10 p-4'>
+      <li class='cursor-pointer text-white font-medium text-md'>Home</li>
+      <li class='cursor-pointer text-white font-medium ease-in-out duration-300 text-md'>Shop</li>
+      <li class='cursor-pointer text-white font-medium ease-in-out duration-300 text-md relative'>
+        Features
+        <div class='absolute top-0 left-20 text-xs bg-pink-500 text-white font-bold px-1 rounded-md'>HOT</div>
+      </li>
+      <li class='cursor-pointer text-white font-medium ease-in-out duration-300 text-md'>Blog</li>
+      <li class='cursor-pointer text-white font-medium ease-in-out duration-300 text-md'>About</li>
+      <li class='cursor-pointer text-white font-medium ease-in-out duration-300 text-md'>Contact</li>
+    </ul>
+  </div>
+</div>
+
