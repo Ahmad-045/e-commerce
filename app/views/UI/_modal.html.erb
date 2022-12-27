@@ -1,12 +1,12 @@
 
-<div class="grid grid-cols-8 p-6 max-w-7xl mx-auto container gap-4 relative bg-white p-8">
-  <button data-action="modal#closeModal" class="absolute top-8 right-8 cursor-pointer" ><i class="fa-solid fa-xmark text-slate-400 hover:text-indigo-400"></i></button>
-  <div class="flex gap-4 flex-col">
+<div class="grid grid-cols-5 md:grid-cols-8 p-4 lg:p-8 w-auto md:max-w-3xl lg:max-w-7xl mx-auto container gap-2 md:gap-4 relative bg-white relative">
+  <button data-action="modal#closeModal" class="absolute z-50 top-4 right-6 md:right-4 lg:top-8 lg:right-8 cursor-pointer" ><i class="fa-solid fa-xmark text-slate-400 hover:text-indigo-400"></i></button>
+  <div class="flex gap-2 md:gap-4 flex-col">
     <%= image_tag 'product-detail-01.jpg.webp'%>
     <%= image_tag 'product-detail-02.jpg.webp'%>
     <%= image_tag 'product-detail-03.jpg.webp'%>
   </div>
-  <div class="col-span-4 relative" data-modal-index-value="2">
+  <div class="col-span-4 md:col-span-4 relative" data-modal-index-value="2">
 
     <div class=' absolute top-1/2 w-full flex justify-between px-8'>
       <button data-action="modal#previous"> <i class="fa-solid fa-caret-left text-xl text-slate-400 hover:text-indigo-400 duration-300 ease-in-out"></i> </button>
@@ -25,15 +25,15 @@
     </div>
 
   </div>
-  <div class="col-span-3">
-    <p class='text-slate-900 text-2xl font-normal'>Lightweight Jacket</p>
+  <div class="col-span-5 md:col-span-3">
+    <p class='text-slate-900 text-lg lg:text-2xl font-normal'>Lightweight Jacket</p>
     <p class="font-bold text-lg my-4">$58.79</p>
-    <p class="text-slate-600 text-md mb-5">Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat.</p>
+    <p class="text-slate-600 text-sm lg:text-md mb-5">Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat.</p>
 
     <div class="flex gap-4 mb-4">
-      <label class="text-slate-700 text-lg text-right w-16">Size</label>
+      <label class="text-slate-700 text-md lg:text-lg text-right w-10 lg:w-16">Size</label>
       <div class="border border-slate-300 flex-auto">
-        <select class="cursor-pointer p-0 pl-2 pr-16 border-slate-400 rounded box-border">
+        <select class="cursor-pointer p-0 pl-2 pr-8 lg:pr-16 border-slate-400 text-md rounded box-border">
           <option>Choose an Option</option>
           <option>Size S</option>
           <option>Size M</option>
@@ -44,9 +44,9 @@
     </div>
 
     <div class="flex gap-4 mb-4">
-      <label class="text-slate-700 text-lg text-right w-16">Color</label>
+      <label class="text-slate-700 text-md lg:text-lg text-right w-10 lg:w-16">Color</label>
       <div class="border border-slate-300 flex-auto">
-        <select  class="cursor-pointer p-0 pl-2 pr-16 border-slate-400 rounded box-border">
+        <select  class="cursor-pointer p-0 pl-2 pr-8 lg:pr-16 border-slate-400 rounded box-border">
           <option>Choose an Option</option>
           <option>Red</option>
           <option>Blue</option>
@@ -57,7 +57,7 @@
     </div>
 
     <div class="flex justify-end">
-      <label class="text-slate-700 text-lg text-right"><button class="uppercase text-lg px-8 py-3 rounded-full hover:bg-slate-900 text-white duration-300 ease-in-out font-medium bg-indigo-400">Add to cart</button>
+      <label class="text-slate-700 text-lg text-right"><button class="uppercase text-xs md:text-md lg:text-lg px-5 py-2 lg:px-8 lg:py-3 rounded-full hover:bg-slate-900 text-white duration-300 ease-in-out font-medium bg-indigo-400">Add to cart</button>
     </div>
 
     <div class="flex gap-x-4 m-8">
@@ -67,5 +67,4 @@
       <i class="fa-brands fa-google-plus-g text-slate-400 hover:text-indigo-400 cursor-pointer duration-300 ease-in-out"></i>
     </div>
   </div>
-
 </div>
