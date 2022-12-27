@@ -14,22 +14,27 @@
 </div>
 
 
-<div class='grid md:grid-cols-3 lg:grid-cols-4 gap-8 mt-12'>
-  <% 12.times do |i| %>
-  <div>
-    <div class='overflow-hidden relative flex justify-center group'>
-      <%= image_tag "product-0#{i+1}.jpg.webp", class: 'group-hover:scale-110 duration-500 ease-in-out cursor-pointer'%>
-      <div class='absolute -bottom-12 group-hover:bottom-8 duration-300 ease-in-out'>
-        <p class='bg-white text-slate-700 hover:bg-slate-700 hover:text-white rounded-full px-6 py-2 cursor-pointer text-2xl md:text-sm'>Quick View</p>
+<div data-controller='modal' class=''>
+  <div class='grid md:grid-cols-3 lg:grid-cols-4 gap-8 mt-12'>
+    <% 12.times do |i| %>
+    <div>
+      <div class='overflow-hidden relative flex justify-center group'>
+        <%= image_tag "product-0#{i+1}.jpg.webp", class: 'group-hover:scale-110 duration-500 ease-in-out cursor-pointer'%>
+        <div class='absolute -bottom-12 group-hover:bottom-8 duration-300 ease-in-out'>
+          <button data-action="modal#showModal" class='bg-white text-slate-700 hover:bg-slate-700 hover:text-white rounded-full px-6 py-2 cursor-pointer text-2xl md:text-sm'>Quick View</button>
+        </div>
       </div>
+      <div class='flex justify-between items-center mt-2'>
+        <p class='text-slate-400 hover:text-indigo-400 cursor-pointer text-xl md:text-md'>Esprit Ruffle Shirt</p>
+        <i class="fa-regular fa-heart text-slate-400 hover:text-indigo-400 cursor-pointer text-xl md:text-md"></i>
+      </div>
+      <p class='text-slate-600 mt-2 text-xl md:text-md'>$16.64</p>
     </div>
-    <div class='flex justify-between items-center mt-2'>
-      <p class='text-slate-400 hover:text-indigo-400 cursor-pointer text-xl md:text-md'>Esprit Ruffle Shirt</p>
-      <i class="fa-regular fa-heart text-slate-400 hover:text-indigo-400 cursor-pointer text-xl md:text-md"></i>
-    </div>
-    <p class='text-slate-600 mt-2 text-xl md:text-md'>$16.64</p>
+    <% end %>
   </div>
-  <% end %>
+  <div class='w-full bg-gray-200 bg-opacity-40 fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden duration-300 ease-in-out h-full' data-modal-target="modalDiv">
+    <%= render 'UI/modal' %>
+  </div>
 </div>
 
 <div class='text-center my-12'>

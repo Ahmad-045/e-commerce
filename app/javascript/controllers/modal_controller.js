@@ -2,7 +2,7 @@ import { Controller } from '@hotwired/stimulus';
 
 // Connects to data-controller="modal"
 export default class extends Controller {
-  static targets = ['slide'];
+  static targets = ['slide', 'modalDiv'];
 
   static values = { index: Number };
 
@@ -33,5 +33,14 @@ export default class extends Controller {
     this.slideTargets.forEach((element, index) => {
       element.hidden = index != this.indexValue;
     });
+  }
+
+  showModal() {
+    this.modalDivTarget.classList.remove('hidden');
+  }
+
+  closeModal() {
+    console.log('Clicked');
+    this.modalDivTarget.classList.add('hidden');
   }
 }
