@@ -8,22 +8,12 @@ export default class extends Controller {
     'closeNavIcon',
     'openNavIcon',
     'navigationBar',
+    'filterBox',
+    'filterShowIcon',
+    'filterHideIcon',
   ];
 
   static values = { index: Number };
-
-  // handleScroll(_event) {
-  //   const clientHeight = this.navigationBarTarget.getBoundingClientRect().top;
-  //   if (-100 > clientHeight) {
-  //     document.getElementById('navigationBar').classList.remove('bg-white');
-  //   } else {
-  //     document.getElementById('navigationBar').classList.add('bg-transparent');
-  //   }
-  // }
-
-  // connect() {
-  //   window.addEventListener('scroll', this.handleScroll);
-  // }
 
   showNavigation() {
     this.mobileNavigationTarget.classList.add('h-96');
@@ -66,5 +56,17 @@ export default class extends Controller {
     this.slideTargets.forEach((element, index) => {
       element.hidden = index != this.indexValue;
     });
+  }
+
+  showFilterBox() {
+    this.filterBoxTarget.classList.add('h-max');
+    this.filterHideIconTarget.classList.remove('hidden');
+    this.filterShowIconTarget.classList.add('hidden');
+  }
+
+  hideFilterBox() {
+    this.filterBoxTarget.classList.remove('h-max');
+    this.filterHideIconTarget.classList.add('hidden');
+    this.filterShowIconTarget.classList.remove('hidden');
   }
 }
