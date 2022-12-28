@@ -222,7 +222,7 @@ DEPENDENCIES
   figaro (~> 1.2)
   importmap-rails
   jbuilder
-  pg (~> 1.1)
+  pg
   puma (~> 5.0)
   rails (~> 7.0.4)
   redis (~> 4.0)
