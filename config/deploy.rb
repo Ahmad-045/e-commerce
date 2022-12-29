@@ -1,5 +1,5 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.5.0"
+lock "~> 3.17.1"
 
 set :application, 'ecommerce'
 set :repo_url, 'git@github.com:Ahmad-045/e-commerce.git' # Edit this to match your repository
